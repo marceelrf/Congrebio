@@ -1,0 +1,113 @@
+---
+title: "Desvendando os Segredos da Visualização de dados"
+subtitle: "ggplot2 para Iniciantes"
+author: "Marcel Ferreira"
+lang: pt-BR
+date: today
+filters:
+  - highlight-text
+format:
+  revealjs:
+    theme: serif
+    transition: fade
+    transition-speed: slow
+    width: 1500
+    footer: "@marceelrf"
+    page-layout: full
+    reference-location: document
+---
+
+## Sobre este curso
+
+-   Infelizmente esse curso é básico (😢) ;
+
+## Sobre mim
+
+-   Física médica - IBB/UNESP (2011 - 2014);
+
+-   Mestrado em Biotecnologia - IBB/UNESP (2015 - 2017);
+
+-   Doutorado em Biotecnologia - IBB/UNESP (2017 - 2022);
+
+-   Pós-doutorado em Genética - FMB/UNESP (2023 - );
+
+::: incremental
+-   Curiosidades:
+
+    -   
+:::
+
+## Por que fazer gráficos por programação?
+
+## Por que no R?
+
+## Por que no ggplot2?
+
+## Grammar of graphics
+
+::: columns
+::: {.column width="50%"}
+![The Grammar of Graphics](https://media.springernature.com/full/springer-static/cover-hires/book/978-0-387-28695-2?as=webp){fig-align="left" width="313"}
+:::
+
+::: {.column width="50%"}
+![Leland Wilkinson (1944 - 2021)](https://upload.wikimedia.org/wikipedia/en/b/b5/Leland_Wilkinson.png){fig-align="left" width="507"}
+:::
+:::
+
+## Grammar of graphics: camadas
+
+::: columns
+::: {.column width="50%"}
+[![Camadas em um gráfico.](https://www.dotlayer.org/en/grammar-of-graphics/2018-09-01-grammar-of-graphics_files/figure-html/image_gg.png)](https://www.dotlayer.org/en/grammar-of-graphics/)
+:::
+
+::: {.column width="50%"}
+-   Temas;
+
+-   Coordenadas;
+
+-   Estatísticas;
+
+-   Facetas;
+
+-   Geometrias;
+
+-   Estética;
+
+-   Dados;
+:::
+:::
+
+## Grammar of graphics: camadas
+
+::: columns
+::: {.column width="50%"}
+![Camadas em um gráfico.](https://www.dotlayer.org/en/grammar-of-graphics/2018-09-01-grammar-of-graphics_files/figure-html/image_gg.png)
+:::
+
+::: {.column width="50%"}
+-   Temas;
+
+-   Coordenadas;
+
+-   Estatísticas;
+
+-   Facetas;
+
+-   [Geometrias]{colour="#b22222"};
+
+-   [Estética]{colour="#b22222"};
+
+-   [Dados]{colour="#b22222"};
+:::
+:::
+
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+```{r}
+1 + 1
+```
