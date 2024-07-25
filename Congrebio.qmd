@@ -144,6 +144,11 @@ library(gapminder)
 
 Fontes gratuitas do google: <https://fonts.google.com/>
 
+```{r}
+sysfonts::font_add_google(name = "Amatic SC", family = "amatic-sc")
+showtext::showtext_auto()
+```
+
 ## Quarto
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
