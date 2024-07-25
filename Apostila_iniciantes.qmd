@@ -1,0 +1,289 @@
+---
+title: "R - básico"
+author: "Marcel Ferreira"
+data: today
+format: html
+lang: pt-BR
+---
+
+## Sobre esse documento
+
+## 1. Introdução à Linguagem R
+
+#### O que é R?
+
+R é uma linguagem de programação e um ambiente de software livre para computação estatística e gráficos. Foi criado por Ross Ihaka e Robert Gentleman na Universidade de Auckland, Nova Zelândia, e é amplamente utilizado por estatísticos e cientistas de dados para análise de dados.
+
+#### Por que usar R?
+
+-   **Gratuito e de código aberto**: R é uma linguagem gratuita e de código aberto, o que significa que qualquer pessoa pode usá-la e contribuir para o seu desenvolvimento.
+
+-   **Comunidade ativa**: A comunidade R é grande e ativa, proporcionando suporte através de fóruns, grupos de discussão e pacotes adicionais.
+
+-   **Grande variedade de pacotes**: Existem milhares de pacotes disponíveis que estendem as funcionalidades do R, facilitando análises complexas e visualizações avançadas.
+
+-   **Visualização de dados**: R é conhecido por suas poderosas capacidades de visualização de dados, especialmente com o pacote ggplot2.
+
+### 2. Instalação do R e RStudio
+
+#### Instalando o R
+
+1.  Acesse o site do CRAN (Comprehensive R Archive Network).
+
+    <https://cran.r-project.org/>
+
+2.  Escolha o link de download apropriado para seu sistema operacional (Windows, macOS, Linux).
+
+3.  Siga as instruções de instalação fornecidas pelo CRAN.
+
+#### Instalando o RStudio
+
+RStudio é um IDE (Integrated Development Environment) que facilita a utilização do R.
+
+1.  Acesse o site do [RStudio](https://rstudio.com/).
+
+2.  Baixe a versão gratuita do RStudio Desktop.
+
+3.  Siga as instruções de instalação.
+
+## 3. Conceitos Básicos do R
+
+#### Interface do RStudio
+
+-   **Console**: Onde você pode digitar e executar comandos R. Respostas imediatas são exibidas diretamente no console.
+
+-   **Script Editor**: Permite escrever e salvar scripts R, que são conjuntos de comandos que podem ser executados em sequência.
+
+-   **Environment/History**:
+
+    -   **Environment**: Exibe os objetos (variáveis, dados, funções) criados durante a sessão.
+
+    -   **History**: Mostra o histórico dos comandos que você digitou no console.
+
+-   **Plots/Files/Packages/Help**:
+
+    -   **Plots**: Onde gráficos gerados são exibidos.
+
+    -   **Files**: Permite navegar pelos arquivos do seu sistema.
+
+    -   **Packages**: Gerencia pacotes instalados.
+
+    -   **Help**: Acessa a documentação e ajuda sobre funções e pacotes R.
+
+#### Sintaxe Básica
+
+-   **Variáveis**: Armazenam dados e são criadas usando o operador `<-`.
+
+    ```{r}
+    x <- 5 # Atribui o valor 5 à variável x
+
+    y <- "Hello, R!" # Atribui a string "Hello, R!" à variável y 
+    ```
+
+-   **Funções**: Realizam operações em dados. Funções são chamadas pelo nome seguido de parênteses.
+
+    ```{r}
+    sum(1, 2, 3) # Retorna a soma dos números: 6 
+    ```
+
+-   **Vetores**: Sequências de elementos do mesmo tipo. Criados com a função `c()`.
+
+    ```{r}
+    numbers <- c(1, 2, 3, 4, 5) # Vetor de números 
+    ```
+
+-   **Tipos de Dados**:
+
+    -   **Numéricos**: Números, incluindo inteiros e decimais.
+
+        ```{r}
+        a <- 10
+        b <- 3.14 
+        ```
+
+    -   **Caracteres**: Sequências de texto.
+
+        ```{r}
+        name <- "R Language" 
+        ```
+
+    -   **Lógicos**: Valores verdadeiros (`TRUE`) ou falsos (`FALSE`).
+
+        ```{r}
+        flag <- TRUE 
+        ```
+
+    -   **Fatores**: Categorizam dados e armazenam como números inteiros com rótulos.
+
+        ```{r}
+        fruits <- factor(c("apple", "banana", "apple", "orange")) 
+        ```
+
+#### Estruturas de Dados
+
+-   **Vetores**: Conjuntos de elementos do mesmo tipo.
+
+    ```{r}
+    vec <- c(1, 2, 3, 4, 5) 
+    ```
+
+-   **Matrizes**: Tabelas bidimensionais onde todos os elementos são do mesmo tipo.
+
+    ```{r}
+    matrix_data <- matrix(1:9, nrow = 3, ncol = 3) 
+    ```
+
+-   **Data Frames**: Tabelas bidimensionais onde as colunas podem conter diferentes tipos de dados.
+
+    ```{r}
+    df <- data.frame(   Name = c("Alice", "Bob", "Charlie"), Age = c(25, 30, 35),   Score = c(90, 85, 88) ) 
+    ```
+
+-   **Listas**: Coleções de elementos que podem ser de diferentes tipos.
+
+    ```{r}
+    lst <- list(   name = "John",   age = 25,   scores = c(85, 90, 95) ) 
+    ```
+
+#### Operações com Dados
+
+-   **Acessar Elementos**: Usar colchetes `[]` para acessar elementos de vetores, matrizes e data frames.
+
+    ```{r}
+    vec[1]       # Primeiro elemento do vetor
+    matrix_data[2, 3]  # Elemento na segunda linha, terceira coluna
+    df$Name      # Coluna "Name" do data frame 
+    ```
+
+-   **Filtragem de Dados**: Selecionar subconjuntos de dados com base em condições.
+
+    ```{r}
+    subset(df, Age > 25) # Linhas onde a idade é maior que 25 
+    ```
+
+-   **Operações Aritméticas**: Operações matemáticas básicas com vetores.
+
+    ```{r}
+    vec + 2     # Adiciona 2 a cada elemento do vetor vec * 3     # Multiplica cada elemento do vetor por 3 
+    ```
+
+#### Exemplos Práticos
+
+-   **Criar um vetor e calcular a média**:
+
+    ```{r}
+    scores <- c(85, 90, 88, 92, 87)
+    mean(scores) # Calcula a média dos scores 
+    ```
+
+-   **Criar um data frame e visualizar os dados**:
+
+    ```{r}
+    students <- data.frame(Name = c("Alice", "Bob", "Charlie"),Age = c(25, 30, 35),   Score = c(90, 85, 88)) 
+
+    head(students) # Mostra as primeiras linhas do data frame
+    ```
+
+### 4. Pacotes e Ajuda no R
+
+#### O que são Pacotes?
+
+Pacotes em R são coleções de funções, dados e documentação que estendem as capacidades básicas da linguagem. Eles são desenvolvidos pela comunidade e podem ser facilmente instalados e utilizados para uma variedade de tarefas, como manipulação de dados, modelagem estatística e visualização.
+
+#### Instalando Pacotes
+
+Para instalar pacotes, você pode usar a função `install.packages()`. Por exemplo, para instalar o pacote `ggplot2`, você usaria o seguinte comando:
+
+```{r,eval=FALSE}
+install.packages("ggplot2")
+```
+
+Esse comando baixa o pacote do CRAN (Comprehensive R Archive Network) e o instala em seu sistema.
+
+#### Carregando Pacotes
+
+Depois de instalar um pacote, você precisa carregá-lo em sua sessão de trabalho para usá-lo. Isso é feito com a função `library()`. Por exemplo, para carregar o `ggplot2`, você usaria:
+
+```{r}
+library(ggplot2)
+```
+
+Agora você pode usar todas as funções e dados fornecidos pelo `ggplot2`.
+
+#### Atualizando Pacotes
+
+Para manter os pacotes atualizados, você pode usar a função `update.packages()`. Isso garante que você esteja usando a versão mais recente dos pacotes instalados:
+
+```{r,eval=FALSE}
+update.packages()
+```
+
+#### Pacotes Populares
+
+Aqui estão alguns pacotes populares e amplamente utilizados em R:
+
+-   **ggplot2**: Para visualização de dados.
+
+-   **dplyr**: Para manipulação de dados.
+
+-   **tidyr**: Para arranjar e limpar dados.
+
+-   **readr**: Para importação de dados.
+
+-   **shiny**: Para construir aplicativos web interativos.
+
+-   **caret**: Para aprendizado de máquina.
+
+#### Obtendo Ajuda
+
+R fornece várias maneiras de acessar ajuda e documentação:
+
+-   **Função help()**: Para obter ajuda sobre uma função específica.
+
+```{r}
+help(mean) # Exibe a documentação da função mean
+```
+
+-   **Interrogação (?)**: Um atalho para a função `help()`.
+
+```{r}
+?mean # Exibe a documentação da função mean
+```
+
+-   **Help de Pacotes**: Para visualizar a documentação de um pacote inteiro.
+
+```{r}
+help(package = "ggplot2") # Exibe a documentação do pacote ggplot2
+```
+
+-   **Função example()**: Para ver exemplos de como usar uma função.
+
+```{r}
+example(mean) # Exibe exemplos de uso da função mean
+```
+
+-   **Função apropos()**: Para procurar funções com base em palavras-chave.
+
+```{r}
+apropos("plot") # Lista todas as funções que contêm "plot" no nome
+```
+
+-   **Vignette**: Alguns pacotes incluem tutoriais e exemplos mais detalhados chamados vignettes.
+
+```{r}
+vignette("ggplot2-specs") # Abre a vignette sobre especificações do ggplot2
+vignette(package = "ggplot2") # Lista todas as vignettes disponíveis no pacote ggplot2
+
+```
+
+Infelizmente nem todos os pacotes possuem vignettes 😢.
+
+#### Recursos Online
+
+-   **R Documentation**: <https://www.rdocumentation.org/>
+
+-   **Stack Overflow**: Um fórum popular onde você pode fazer perguntas e encontrar respostas sobre R.
+
+-   **Comunidade R**: Muitos blogs, fóruns e grupos de discussão são dedicados a R e podem ser úteis para resolver dúvidas e aprender novas técnicas.
+
+-   **IAs generativa**: Vocês pode (e deve) utilizar sistemas como ChatGTP ou Gemini para verificar e aprimorar seu código. Lembre-se apenas de estudar as soluções propostas;

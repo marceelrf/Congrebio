@@ -17,9 +17,25 @@ format:
     reference-location: document
 ---
 
+## Antes de começarmos..
+
+Vamos instalar os pacotes necessários no R:
+
+```{r,eval=FALSE,echo=TRUE}
+install.packages("tidyverse")
+install.packages("dados")
+install.packages("ISLR")
+install.packages("devtools")
+devtools::install_github("curso-r/basesCursoR")
+install.packages("colourpicker")
+install.packages("showtext")
+```
+
 ## Sobre este curso
 
 -   Infelizmente esse curso é básico (😢) ;
+-   Não é um curso sobre estatística;
+-   Não é um curso sobre programação;
 
 ## Sobre mim
 
@@ -79,7 +95,7 @@ format:
 :::
 :::
 
-## Grammar of graphics: camadas
+## Grammar of graphics: camadas {transition="none"}
 
 ::: columns
 ::: {.column width="50%"}
@@ -103,6 +119,30 @@ format:
 :::
 :::
 
+## Grammar of graphics: `Dados`
+
+## Grammar of graphics: `Estética`
+
+## Grammar of graphics: `Geometrias`
+
+## Gráfico simples
+
+-   `Dados`;
+-   `Estética`;
+-   `Geometrias`;
+
+## Gráfico simples
+
+```{r}
+library(tidyverse)
+library(gapminder)
+```
+
+## Gráticos - cores
+
+## Gráficos - texto
+
+Fontes gratuitas do google: <https://fonts.google.com/>
 
 ## Quarto
 
