@@ -127,6 +127,22 @@ install.packages("showtext")
 
 ## Gráfico simples
 
+```{r}
+#| echo: true
+#| output-location: column-fragment
+library(ggplot2)
+
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess")
+
+# Dados: airquality
+# Esteticas: {x = airquality, y = Ozone}
+# Geometrias: {Pontos = geom_point, Regressão = geom_smooth}
+```
+
+## Gráfico simples
+
 -   `Dados`;
 -   `Estética`;
 -   `Geometrias`;

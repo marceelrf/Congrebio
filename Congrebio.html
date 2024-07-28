@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.4.552">
 
   <meta name="author" content="Marcel Ferreira">
-  <meta name="dcterms.date" content="2024-07-25">
+  <meta name="dcterms.date" content="2024-07-28">
   <title>Desvendando os Segredos da Visualização de dados</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -403,7 +403,7 @@ Marcel Ferreira
 </div>
 </div>
 
-  <p class="date">2024-07-25</p>
+  <p class="date">2024-07-28</p>
 </section>
 <section id="antes-de-começarmos.." class="slide level2">
 <h2>Antes de começarmos..</h2>
@@ -529,17 +529,43 @@ Marcel Ferreira
 </section>
 <section id="gráfico-simples" class="slide level2">
 <h2>Gráfico simples</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
+<span id="cb2-4"><a href=""></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb2-5"><a href=""></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="Congrebio_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="co"># Dados: airquality</span></span>
+<span id="cb3-2"><a href=""></a><span class="co"># Esteticas: {x = airquality, y = Ozone}</span></span>
+<span id="cb3-3"><a href=""></a><span class="co"># Geometrias: {Pontos = geom_point, Regressão = geom_smooth}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="gráfico-simples-1" class="slide level2">
+<h2>Gráfico simples</h2>
 <ul>
 <li><code>Dados</code>;</li>
 <li><code>Estética</code>;</li>
 <li><code>Geometrias</code>;</li>
 </ul>
 </section>
-<section id="gráfico-simples-1" class="slide level2">
+<section id="gráfico-simples-2" class="slide level2">
 <h2>Gráfico simples</h2>
 </section>
-<section id="gráticos---texto" class="slide level2">
-<h2>Gráticos - texto</h2>
+<section id="gráticos---cores" class="slide level2">
+<h2>Gráticos - cores</h2>
+</section>
+<section id="gráficos---texto" class="slide level2">
+<h2>Gráficos - texto</h2>
 <p>Fontes gratuitas do google: <a href="https://fonts.google.com/" class="uri">https://fonts.google.com/</a></p>
 </section>
 <section id="quarto" class="slide level2">
